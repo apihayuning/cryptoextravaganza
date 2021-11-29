@@ -1,1 +1,2 @@
-gunicorn --worker-tmp-dir /dev/shm app:bot
+bind = "0.0.0.0:8080"
+workers = 2
