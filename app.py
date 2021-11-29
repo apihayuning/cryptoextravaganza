@@ -6,12 +6,13 @@ import gspread
 import random
 import requests
 import json
+import os
 
 # tickets
 tickets = random.sample(range(1000000000, 9999999999), 100)
 
 # gs
-gc = gspread.service_account(filename='.\\cryptovaganza-49bcfa2d9193.json')
+gc = gspread.service_account(filename=os.getcwd()+'\\cryptovaganza-49bcfa2d9193.json')
 sh = gc.open_by_key('1S7U57iLphNp0kaJN9jwDBtFZ5hAPcmF60Xn8Tgaz-EE')
 worksheet = sh.sheet1
 
